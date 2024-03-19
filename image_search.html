@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image Search</title>
+        <style>.form_div {
+            position: absolute;
+            display: flex;
+            width: 200px;
+            height: 200px;
+        /* Center form on page horizontally & vertically */
+            top: 40%;
+            left: 45%;
+            margin-top: -150px;
+            margin-left: -150px;
+            align-items: center;
+        }.search-button{
+            position: absolute;
+            height: 30px; 
+            border: none; 
+            width:  280px;
+            display: flex;
+            padding-left: 200px;
+            margin-left: -50px;
+        } .button{
+            border-radius: 12px;
+            margin-left: 10px;
+        }.search-bar {
+            border-radius: 25px;
+            padding: 20px;
+            width: 450px;
+            height: 10px;
+            margin-bottom: 10px;
+        } h1{          
+        color: rgb(17, 16, 20);
+        font-size: 70px;
+        margin-bottom: 10px;
+        border: 5px solid;
+        background-color: lightskyblue;
+        width:fit-content;
+        padding: 5px;
+        }</style>
+    </head>
+    <body>
+        <div class="form_div">
+        <form action="http://www.google.com/images?">
+            <h1 class="heading1">Google Images</h1><br>
+            <input type="text" name="q" class="search-bar">
+            <div class="search-button">
+                <input type="submit" value="Google Image Search" class="button">
+            </div>
+        </form>
+        </div>
+        <p align="right" style="vertical-align: top;"><a href="index.html" >Back to Google Search Home </a></p>
+    </body>
+</html>
