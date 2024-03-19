@@ -1,0 +1,53 @@
+{% extends "rgmloans/layout.html" %}
+{% load static %}
+{% block content %}
+<div id="allOfferedLoansCategoriesDiv" class="allOfferedLoansCategoriesDiv" >
+</div>
+
+<div id="contactLoginDiv" class="contactLoginDiv" >
+    <div class="loginDiv" >
+        <h2> Login </h2>
+        {% if message %}
+            <div>{{ message }}</div>
+        {% endif %}
+        <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <div class="login-form-group">
+            <input autofocus class="login-form-control" type="text" name="username" placeholder="Username">
+        </div>
+        <div class="login-form-group">
+            <input class="login-form-control" type="password" name="password" placeholder="Password">
+        </div>
+        <input class="login-contact-btn" type="submit" value="Login">
+        </form>
+        Don't have an account? <a href="{% url 'register' %}">Register here.</a>
+    </div>
+    <div id="contactDiv" class="contactDiv" >
+        <h2>Connect with us</h2>
+        <form   id="contact-form"  method="post"  action="javascript:contact_user();">
+        {% csrf_token %}
+        <div class="contact-form-group">
+            <input class="contact-form-control" autofocus id="fullname" type="text" name="fullname" placeholder="Full Name" required>
+        </div>
+        <div class="contact-form-group">
+            <input class="contact-form-control" type="email" name="email"id="email" placeholder="Email Address" required>
+        </div>
+        <div class="contact-form-group">
+            <input class="contact-form-control" autofocus type="text" name="phone" id="phone" placeholder="Phone Number" required>
+        </div>
+        <div class="contact-form-group">
+            <input class="contact-form-control" autofocus type="text" name="postal" id="postal" placeholder="Postal Code" required>
+        </div>
+        <div class="contact-form-group">
+            <input class="contact-form-control" autofocus  style="height:150px;" type="text" name="message" id="message" placeholder="Message or Question" required>
+        </div>
+        <input class="login-contact-btn" type="submit" value="Contact">
+        </form>
+    </div>
+   
+</div>
+
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="{% static 'rgmloans/index.js' %}"></script>
+{% endblock %}

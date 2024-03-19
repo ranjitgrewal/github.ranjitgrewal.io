@@ -1,0 +1,90 @@
+{% extends "rgmloans/layout.html" %}
+{% load static %}
+{% load tz %}
+{% block content %}
+{% if message %}
+<div>{{ message }}</div>
+{% endif %}
+<div id="adminIndexDiv" class="adminIndexDiv">
+    <div id="adminNotificationsDiv" class="section adminNotificationsDiv">
+        {% if notifications %}
+        <h2> All notifications </h2>        
+        {% for notification in notifications %}
+          <div class="contactNotificationsDiv ">
+            {%if notification.get_message_age > 1 %}
+            <h4> URGENT</h4>
+            {% endif %}   
+
+            <table>
+                <tr>
+                  <td><strong>Contact Name:</strong> {{notification.fullname}}</td>
+                  <td> <strong>Email:</strong>{{notification.email}}</td>
+                </tr> 
+                <tr>   
+                    <td><strong>Phone:</strong> {{notification.phone}}   </td>
+                    <td><strong>Contact time:</strong> {{notification.date_of_contact}}  </td>
+                </tr> 
+                <tr> 
+                    <td><strong>Postal:</strong> {{notification.postal_code}}</td>
+                </tr> 
+                <tr>
+                    <td><strong>Message/Question:</strong> {{notification.message}}  </td>
+                </tr>  
+                <tr>  
+                    <td>
+                        {% with notification.id as id %}
+                        <button class="login-contact-btn"  onclick="javascript:remove_notification(id)" id="btnDeleteNotification-{{ id }}">Delete</button>
+                        {% endwith %}
+                    </td>          
+                </tr>     
+            </table>
+          </div>
+        {% endfor %}
+    {% else %}
+        <h2> No notifications to show </h2>
+    {% endif %}    
+    </div>
+  
+    <div id=" adminNewOfferedLoanDiv" class=" section adminNewOfferedLoanDiv">
+            <form id="new-loan-offer-form" method="post">
+            {% csrf_token %}
+            <div class="loan-offer-form-group">
+                <h4>Add New Loan Offer</h4>
+            </div>
+            <div class="loan-offer-form-group">
+                <input class="loan-offer-form-control" autofocus type="text" id="category"  name="category" placeholder="Category or Type">
+            </div>
+            <div class="loan-offer-form-group">
+                <input class="loan-offer-form-control" autofocus style="height:150px;"  type="text" id="description" name="description" placeholder="Description">
+            </div>
+            <div class="loan-offer-form-group">
+                <input class="loan-offer-form-control" autofocus type="text" id="payment_frequency" name="payment_frequency" placeholder="Weekly, Bi-weekly, Monthly ">
+            </div>
+            <div class="loan-offer-form-group">
+                <input class="loan-offer-form-control" autofocus type="text" name="rate" id="rate" placeholder="Interest Rate Offered">
+            </div>
+            <div class="loan-offer-form-group">
+                <input class="loan-offer-form-control" autofocus type="text" id="min_credit" name="min_credit" placeholder="Minimum credit Score Required">
+            </div>
+            <div class="loan-offer-form-group">
+                <input class="loan-offer-form-control" autofocus type="text" id="min_amount" name="min_amount" placeholder="Minimum amount offered">
+            </div>
+            <div class="loan-offer-form-group">
+                <input class="loan-offer-form-control" autofocus type="text" id="max_amount" name="max_amount" placeholder="Maximum amount offered">
+            </div>
+            <div class="loan-offer-form-group">
+                <input class="loan-offer-form-control" autofocus type="text" id="max_tenure" name="max_tenure" placeholder="Maximum Tenure">
+            </div>
+            <div class="loan-offer-form-group">
+                <input class="login-contact-btn"  type="submit" value="Add Loan Offer">
+            </div>
+        </form>
+    </div>
+    <div id="adminOfferedLoansDiv" class="section adminOfferedLoansDiv">
+    </div>
+</div>
+
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="{% static 'rgmloans/index.js' %}"></script>
+{% endblock %}

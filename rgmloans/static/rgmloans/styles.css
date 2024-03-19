@@ -1,0 +1,466 @@
+html, body {
+  height:100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+layoutDiv
+{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+
+}
+.header
+{
+    background-color: hsla(51, 62%, 69%, 0.463);
+    display: flexbox;
+}
+.welcomeDiv
+  {
+  float:right;
+  }
+.contentdiv
+{
+    background-color:white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 1px;
+
+}
+
+.sidebar
+{
+  background-color: hsla(51, 62%, 69%, 0.463);
+  -webkit-text-fill-color: black;
+    float: left;  
+    height: 100%;
+    width: 13vw;
+    min-height: 100vh;
+    font-size: 30px;
+}
+
+.indexDiv > * {
+  display: inline-block;
+  text-align: center;
+}
+.loanOfferDiv
+{
+    border: solid 1px #a33939;
+
+}
+.delBtnDiv
+{  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+li
+    {
+    list-style-type: none
+    }
+
+.loan-types-button {
+        border-radius: 25px;
+        background: #79a6dc;
+        color: rgb(14, 14, 14);
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+        margin-right: 20px;
+        margin-top: 20px;
+        font-size: 20px;
+      }
+.login-contact-btn {
+        border-radius: 25px;
+        background: #79a6dc;
+        color: rgb(14, 14, 14);
+        width: 150px;
+        height: 50px;
+        margin-right: 20px;
+        margin-top: 20px;
+        font-size: 20px;
+      }
+      
+.allOfferedLoansCategoriesDiv
+{    
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right:  10px;
+    float: left;
+    width: 50vw;
+
+}
+
+
+.categoryDiv
+{
+  height:200px;
+  width:35%;
+  box-sizing:border-box;
+  float:left;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right:  10px;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+
+}
+.contactLoginDiv {
+    float: left;  
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+  }
+.contactOfficesDiv {
+  background-color:white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 0px;
+
+
+  }
+.officesDiv
+{
+    border: solid 1px #a33939;
+    margin-top: 0px;
+    margin-right: 30px;
+    margin-left: 0px;
+    width: 50vw;
+    font-size: 20px;
+    text-align: center;
+    float:left;
+
+}
+.contactDiv
+{
+    border: solid 1px #a33939;
+    margin-top: 0px;
+    margin-right: 20px;
+    width: 25vw;
+    height: 500px;
+    font-size: 20px;
+    text-align: center;
+
+}
+.loginDiv
+{
+    margin-top: 10px;
+    border: solid 1px #a33939;
+    width: 25vw;
+    height: 300px;
+    font-size: 20px;
+
+}
+.contact-form-group
+{
+  display:block;
+  font-size: 20px;
+
+}
+.contact-form-control
+{
+  width: 70%;
+  font-size: 20px;
+}
+.login-form-group
+{
+  display:block;
+  font-size: 20px;
+
+}
+.login-form-control
+{
+  width: 70%;
+  font-size: 20px;
+}
+.registerDiv
+{
+    margin-top: 0px;
+    margin-left: 400px;
+    width: 65vw;
+    align-items: left;
+    display:block;
+    justify-content: left;
+    font-size: 20px;
+
+}
+.register-form-group
+{
+  display:block;
+  font-size: 30px;
+
+}
+.register-form-control
+{
+  width: 60%;
+  font-size: 30px;
+}
+.adminIndexDiv {
+  background-color:white;
+  margin-top: 0px;
+  margin-left: 0px;
+  justify-content: center;
+  font-size: 0px;
+  display:flex;
+}
+.adminIndexLinksDiv {
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  height: 50%;
+
+}
+.indexApplicationsDiv{
+  background-image: url('./application.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  backdrop-filter: blur(10px);
+  opacity: 0.99;
+}
+
+.offeredLoansDiv{
+	width: 100%;
+  align-items: left;
+  justify-content: left;
+	display: block;
+}
+
+.section{
+	display: inline-flex;
+}
+.adminNotificationsDiv {
+  float:left;
+	width: 55vw;
+  height: 650px;
+  display: block;
+  font-size: 20px;
+  margin-left: 0px;
+  margin-top: 10px;
+  border: solid 1px #a33939;
+  overflow:scroll; 
+
+}
+.contactNotificationsDiv
+{
+  border: solid 1px #a33939;
+
+}
+.adminOfferedLoansDiv {
+	width: 40%;
+  height:500px;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-size: 20px;
+  display:block;
+  margin-left: 5px;
+  margin-top: 10px;
+  overflow:scroll; 
+  height: auto;
+  border: solid 1px #a33939;
+  float:left;
+
+}
+.adminNewOfferedLoanDiv{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+	width: 40vw;
+  height: 650px;
+  font-size: 20px;
+  margin-left: 5px;
+  margin-top: 10px;
+  border: solid 1px #a33939;
+  display:block;
+}
+
+.loan-offer-form-group
+{
+  display:block;
+  font-size: 25px;
+
+}
+.new-application-form-control
+{
+  width: 40%;
+  font-size: 25px;
+}
+.loan-offer-form-control
+{
+  width: 80%;
+  font-size: 25px;
+}
+.userIndexDiv {
+  display:flex;
+  width: 1500px;
+  height:1000px;
+  margin-top: 0px;
+  border: solid 1px #a33939;
+}
+.userApplicationsDiv {
+  float:left;
+  font-size: 20px;
+  overflow:scroll; 
+  display:block;
+  width: 500px;
+  height:600px;
+  margin-left: 30px;
+  justify-content: center;
+
+}
+.userLoansDiv {
+  float:left;
+  font-size: 20px;
+  overflow:scroll; 
+  display:block;
+  width: 500px;
+  height:600px;
+
+}
+.userApplicationDiv {
+  font-size: 20px;
+  width: 500px;
+  border: solid 1px #a33939;
+  margin-top: 10px;
+  justify-content: center;
+
+}
+.userLoanDiv {
+  font-size: 20px;
+  width: 500px;
+  border: solid 1px #a33939;
+  margin-top: 10px;
+
+}
+.newApplicationDiv {
+  float:right;
+  margin-top: 0px;
+  width: 500px;
+  height:600px;
+  text-align: center;
+  align-items: baseline;
+  justify-content: center;
+  border: solid 1px #a33939;
+  font-size: 20px;
+  display:block;
+
+}
+.allLoansDiv
+{
+  border: solid 1px #a33939;
+  overflow: scroll;
+  padding: 20px;
+
+}
+.loanDiv
+{
+  width: 25%;
+  height:600px;
+  float: left;
+  padding: 20px;
+  font-size: 20px;
+  border: solid 1px #a33939;
+
+}
+.allApplicationsDiv
+{
+  border: solid 1px #a33939;
+  overflow: scroll;
+  padding: 20px;
+
+}
+.applicationDiv
+{
+  width: 25%;
+  height:400px;
+  float: left;
+  padding: 20px;
+  font-size: 20px;
+  border: solid 1px #a33939;
+  justify-content: center;
+
+}
+
+.profileDiv
+{
+	width: 60vw;
+  height: 90vh;
+  margin-left: 230px;
+  margin-top: 0px;
+  border: solid 1px #a33939;
+  display:flex;
+}
+.editProfileDiv
+{
+	width: 80vw;
+  margin-left: 100px;
+  border: solid 1px #a33939;
+  display:block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.update-profile-form-control
+{
+  width: 53%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: left;
+  align-items: left;
+  justify-content: center;
+}
+
+.adminUsersDivd { 
+  display:flex;
+  overflow:scroll; 
+  margin-left: 100px; 
+  justify-content: center;
+  width:90vw;
+  
+} 
+.adminUsersDiv{ 
+  overflow: scroll;
+  padding: 20px;
+
+}
+
+.allUsersDiv { 
+  margin-top: 0px;
+  margin-left: 1px;
+  width: 22%;
+  height:700px;
+  float: left;
+  padding: 20px;
+  font-size: 20px;
+  border: solid 1px #a33939;
+  overflow: scroll;
+
+}
+.userProfileDiv { 
+  margin-top: 0px;
+  margin-left: 1px;
+  width: 42%;
+  height:700px;
+  float: left;
+  padding: 20px;
+  font-size: 20px;
+  border: solid 1px #a33939;
+  overflow: scroll;
+  text-align: left;
+  align-items: left;
+  justify-content: center;
+
+}

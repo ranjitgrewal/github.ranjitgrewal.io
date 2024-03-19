@@ -1,0 +1,93 @@
+{% extends "rgmloans/layout.html" %}
+{% load static %}
+{% block content %}
+<div class="registerDiv" >
+    <h2>Register with us to apply</h2>
+
+    {% if message %}
+        <div>{{ message }}</div>
+    {% endif %}
+    <form action="{% url 'register' %}" method="post">
+        {% csrf_token %}
+        <div class="register-form-group">
+            <input class="register-form-control" autofocus type="text" name="first_name" required placeholder="First name with middle name">
+        </div>
+        <div class="register-form-group">
+            <input class="register-form-control" autofocus type="text" name="last_name" required placeholder="Last name">
+        </div>
+        <div class="register-form-group">
+            <input class="register-form-control" autofocus type="text" name="username" required placeholder="Username">
+        </div>
+        <div class="register-form-group">
+            <input class="register-form-control" type="email" name="email" required placeholder="Email Address">
+        </div>
+        <div class="register-form-group">
+            <input class="register-form-control" type="password" name="password" required placeholder="Password">
+        </div>
+        <div class="register-form-group">
+            <input class="register-form-control" type="password" name="confirmation" required placeholder="Confirm Password">
+        </div>
+        <div class="register-form-group">
+            <input class="register-form-control" autofocus type="text" name="address" required placeholder="Street Address">
+        </div>
+        <div class="register-form-group">
+            <input class="register-form-control" autofocus type="text" name="city" required placeholder="City">
+        </div>
+        <div class="register-form-group">
+            <label for="provinces">Select province</label> 
+                <select name="province" id="province"> 
+                    <option value=""> Province</option>
+                    {% for value,label in provinces %}
+                            <option value="{{ value }}">{{ label }}</option>
+                    {% endfor %}
+                </select>
+          </div>
+        <div class="register-form-group">
+            <input class="register-form-control" autofocus type="text" name="postal_code" required placeholder="Postal code">
+        </div>
+        <div class="register-form-group">
+            <input class="register-form-control" autofocus type="text" name="phone" required placeholder="Phone">
+        </div>
+        <div class="register-form-group">
+            <input class="register-form-control" autofocus type="text" name="company" required placeholder="Company or Business name">
+        </div>  
+        <div class="register-form-group">
+            <label for="categories">Select Loan Type</label> 
+                <select name="category" id="category"> 
+                    <option value=""> Loan Type/Category</option>
+                    {% for category in categories %}
+                            <option value="{{ category }}">{{ category }}</option>
+                    {% endfor %}
+                </select>
+        </div>
+        <div class="register-form-group">
+            <input class="register-form-control" autofocus type="number" name="annual_family_income" required placeholder="Annual Household Income">
+        </div>  
+        <div class="register-form-group">
+            <input class="register-form-control" autofocus type="number" name="monthly_expenses"  required placeholder="Monthly Family Expenses">
+        </div>
+        <div class="register-form-group">
+            <input class="register-form-control" autofocus type="number" name="existing_loan_payments" required placeholder="Monthly Existing Loan Payments">
+        </div>
+        <div class="register-form-group">
+            <input class="register-form-control" autofocus type="number" name="assets_total" required placeholder="Total Family Assets">
+        </div>
+        <div class="register-form-group">
+            <input class="register-form-control" autofocus type="number" name="credit_rating" required placeholder="Credit Score of the primary applicant">
+        </div>
+        <div class="register-form-group">
+            <input class="register-form-control" autofocus type="number" name="requested_amount" required placeholder="Amount you need to borrow">
+        </div>
+        <div class="register-form-group">
+            <input class="login-contact-btn" type="submit" value="Register">
+        </div>
+    </form>
+    <div class="register-form-group">
+        Already have an account? <a href="{% url 'login' %}">Log In here.</a>
+    </div>
+
+</div>
+{% endblock %}
+{% block script %}
+
+{% endblock %}
